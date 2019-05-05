@@ -1,0 +1,22 @@
+SVM:
+
+ * powerful, can do classification, regression, outlier detection
+ * works well for non-linear problems
+ * good for complicated small or medium-size datasets
+ * sensitive to feature scales => Rescaling before fitting is required
+ * think of an SVM classifier as fitting the widest possible street between the classes. This is called large margin classification
+ 
+Hard and soft margins:
+ * Hard margin classification:
+   - only works if the data are linearly separable
+   - sensitive to outliers
+ * Soft margin:
+   - works for non-linearly separable data
+   - less sensitive to outliers
+
+In Scikit-Learn’s SVM classes, the hardness can be controlled using the C hyperparameter:
+ * smaller C value => wider street but more margin violations (very soft)
+ * high C value => fewer margin violations but smaller margin (harder)
+ * smaller C often leads to better generalization
+ * If your SVM model is overfitting, you can try regularizing it by reducing C
+ 
